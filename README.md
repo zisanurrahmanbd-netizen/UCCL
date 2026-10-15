@@ -43,18 +43,19 @@ python3 -m http.server 3000 --bind 0.0.0.0
 
 The site is themed from the UCCL company logo (charcoal-black mark + red crescent + white).
 
-- `assets/img/logo-lockup.png` — **the full official lockup** (mark + two-line wordmark + red tagline), used as-is in header + footer
+- `assets/img/logo-lockup.png` — **the official company logo** (mark + two-line wordmark + red tagline), used as-is in header + footer; original download kept at `tools/data/user-logo.png` (640×640 with transparent padding — the site file is that exact artwork with only the empty margin losslessly trimmed to 493×122)
 - `assets/img/favicon.png` — browser tab icon (mark variant, for visibility on white tabs)
 - `assets/img/logo-mark.png` / `logo-mark-white.png` / `logo-mark-mono.png` — mark-only variants (generated extras, not referenced by the site)
 
 The coverage map is generated from real geographic data by `tools/make_map.py`
 (geoBoundaries ADM0, CC BY 4.0 — attribution printed under the map).
 
-The lockup is rendered by `tools/make_lockup.py`; the mark variants by
-`tools/make_logo.py`. To swap in the official artwork, overwrite
-`assets/img/logo-lockup.png` (same 1600×360 transparent canvas) — no code changes
-needed. The footer places the dark lockup on a plain white plate so it reads
-unchanged against the charcoal footer.
+The site ships the official artwork (downloaded from the company's image host,
+transparent margin trimmed losslessly). `tools/make_lockup.py` renders the earlier
+recreation and remains only as a fallback if the official file ever needs
+regenerating; the mark variants come from `tools/make_logo.py`. The footer places
+the dark lockup on a plain white plate so it reads unchanged against the charcoal
+footer.
 
 Brand tokens live at the top of `assets/css/styles.css`: `--gold-500` is the brand red
 (`#E1251B`), `--navy-900` is the charcoal black (`#201C1E`), backgrounds are white/light gray.

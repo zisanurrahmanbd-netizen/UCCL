@@ -237,7 +237,7 @@ a.topbar__item:hover { color: var(--gold-300); }
 .logo__lockup {
   display: block;
   height: 54px;
-  width: auto; /* 1600x360 source → 240px wide at 54px */
+  width: auto; /* 493x122 official artwork → 218px wide at 54px */
 }
 
 .nav__list { display: flex; align-items: center; gap: 26px; }
