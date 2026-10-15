@@ -1,0 +1,10 @@
+# Runtime artifacts
+server.log
+server.pid
+
+# SSH keys — never commit private keys
+ssh/
+
+# OS noise
+.DS_Store
+Thumbs.db
