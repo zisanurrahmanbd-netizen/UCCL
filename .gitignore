@@ -5,6 +5,10 @@ server.pid
 # SSH keys — never commit private keys
 ssh/
 
+# Python bytecode
+__pycache__/
+*.pyc
+
 # OS noise
 .DS_Store
 Thumbs.db
